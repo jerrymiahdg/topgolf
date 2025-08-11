@@ -85,7 +85,7 @@ function App() {
         <p className="text-6xl italic">Topgolf</p>
         <div className="p-4"></div>
         <p className="font-libertinus">Playing this round:</p>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap justify-center">
           <p className="text-4xl">Adrien,</p>
           {playing.map((player) => (
             <p className="text-3xl">{player},</p>
@@ -93,7 +93,7 @@ function App() {
         </div>
         <div className="p-1"></div>
         <p className="font-libertinus">Sitting out this round:</p>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap justify-center ">
           {notPlaying.map((player) => (
             <p className="text-3xl">{player},</p>
           ))}
