@@ -71,8 +71,8 @@ function App() {
           let val = el.data()["round"];
           const roundRef = doc(db, "round", "round");
           if (type == "NEXT") val += 1;
-          else if (type == "BACK") val -= 1;
-          else val = 1;
+          else if (type == "RESTART") val = 1;
+          else if (val > 1) val -= 1;
           updateDoc(roundRef, { round: val }).then(fetchRound);
         })
       )
@@ -83,7 +83,7 @@ function App() {
     <>
       <div className="flex flex-col gap-4 items-center font-playwrite">
         <div className="p-8"></div>
-        <p className="text-6xl italic">Topgolf</p>
+        <p className="text-6xl">Topgolf</p>
         <div className="p-4"></div>
         <p className="font-libertinus">Playing this round:</p>
         <div className="flex gap-2 flex-wrap justify-center">
