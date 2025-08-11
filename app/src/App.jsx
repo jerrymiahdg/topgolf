@@ -60,6 +60,7 @@ function App() {
   };
 
   useEffect(() => {
+    fetchRound();
     setInterval(fetchRound, 5000);
   }, []);
 
