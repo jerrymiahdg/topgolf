@@ -60,7 +60,7 @@ function App() {
   };
 
   useEffect(() => {
-    fetchRound();
+    setInterval(fetchRound, 5000);
   }, []);
 
   const updateRound = (type) => {
@@ -125,7 +125,7 @@ function App() {
           size={60}
           strokeWidth={0.3}
           onClick={() => {
-            window.location.reload();
+            fetchRound();
           }}
         />
       </div>
